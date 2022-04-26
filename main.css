@@ -1,10 +1,14 @@
 h1{
-    color: blue;
+    color: grey;
 }
-
-p.menuContainer{
+#theMenu.list.menuContainer div{
+    border: solid;
+    color: grey;
+    display: flex;
+    justify-content: space-around;
+}
+p{
     color: red;
-    background-color: beige;
 }
 #homePage a{
     text-align: left; 
@@ -41,13 +45,3 @@ p.menuContainer{
     text-decoration: none;
     display: inline-block;
  }
-.menuContainer {
-    border: solid;
-    color: grey;
-}
-.parentTestDiv > div{
-    background-color: black;
-}
-.parentTestDiv div{
-    background-color: blue;
-}
