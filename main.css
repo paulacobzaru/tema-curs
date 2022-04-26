@@ -2,7 +2,52 @@ h1{
     color: blue;
 }
 
-p{
+p.menuContainer{
     color: red;
     background-color: beige;
+}
+#homePage a{
+    text-align: left; 
+}
+.flex-container div {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;    
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    color:darkgrey;
+    padding-left: 35%;
+    padding-top: 35%;
+    padding-right: 35%;
+    padding-bottom: 35%;
+ } 
+ .flex-container a:hover {
+    color: black;
+    background-color: grey;
+ }
+ .teme{
+    align-items: center;
+    text-align: center;
+ }
+ a:link{
+    width: 400px;
+    height: 300px;
+    font-size: 30px;
+    background-color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+ }
+.menuContainer {
+    border: solid;
+    color: grey;
+}
+.parentTestDiv > div{
+    background-color: black;
+}
+.parentTestDiv div{
+    background-color: blue;
 }
