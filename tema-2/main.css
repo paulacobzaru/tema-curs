@@ -1,22 +1,32 @@
-body {
-  left: 200px;
-  background-color: azure;
-}
-h3 {
+h1 {
+  text-align: center;
+  vertical-align: middle;
   color: red;
 }
-img {
-  border-radius: 50%;
-  position: relative;
-  width: 75px;
-  height: 75px;
-  margin-left: 20%;
-  margin-top: 5%;
-  display: block;
-  padding-right: 10px;
-  float: left;
+h2 {
+  color: red;
 }
-img.type {
+h3 {
+  display: block;
+  color: red;
+}
+#resume {
+  padding-right: 10px;
+  }
+#photo{
+  border-radius: 50%;
+  width: 100px !important;
+  height: 100px !important;
+}
+#big{
+  background-color: grey;
+}
+#text{
+  text-indent: 20px;
+  text-align: left;
+#resume{
   width: 50px;
-  height: 50px;
+  } 
+#details{
+  border-radius: 50%;
 }
