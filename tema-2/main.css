@@ -1,32 +1,73 @@
 h1 {
-  text-align: center;
-  vertical-align: middle;
   color: red;
+  font: bold Arial;
+  display: flex;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
-h2 {
-  color: red;
+p{
+  font-family: Arial, Helvetica, sans-serif;
 }
-h3 {
+#myphoto {
+  border-radius: 50%;
+  margin: 5px 0px 5px 5px;
+  max-width: 10%;
   display: block;
-  color: red;
+  float: left;
 }
-#resume {
-  padding-right: 10px;
-  }
-#photo{
-  border-radius: 50%;
-  width: 100px !important;
-  height: 100px !important;
+.elements{
+  color:red;
+  font: bold Arial;
+  display: flex;
+  align-items: center;
+  background-color: lightgrey;
+  transition-property: font-size;
+  transition-duration: 3s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  font-family: Arial, Helvetica, sans-serif;
 }
-#big{
-  background-color: grey;
+.elements:hover{
+  font: bold 30px arial;
 }
-#text{
-  text-indent: 20px;
+th{
   text-align: left;
-#resume{
-  width: 50px;
-  } 
-#details{
+  font-family: Arial, Helvetica, sans-serif;
+}
+td{
+  margin-left: 40px;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.role{
+  font-style: italic;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.company{
+  font-style: italic;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.years{
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+}
+ul{
+  padding-left: 2%;
+}
+src.details{
   border-radius: 50%;
+  max-width: 5%;
+  display: block;
+  float: left;
+}
+.edu{
+  font-weight: bolder;
+  font-style: italic;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.studying{
+  font-style: italic;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
