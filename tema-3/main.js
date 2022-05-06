@@ -54,8 +54,8 @@ dots.style.visibility = 'visible';
 
 //==================================================
 
-/*let theNewPTag6 = document.createElement('p');//<p></p>
-let theText6 = document.getSelection(b + ' .');
+let theNewPTag6 = document.createElement('p');//<p></p>
+let theText6 = document.getSelection(b);
 theNewPTag6.appendChild(theText6);//<p>test text</p>
 let element7 = document.getElementsByTagName("body")[0];
 element7.appendChild(theNewPTag6);//<body><p>test text</p></body>
@@ -67,29 +67,29 @@ let element8 = document.getElementsByTagName("body")[0];
 element8.appendChild(theNewPTag7);//<body><p>test text</p></body>
 
 let theNewPTag8 = document.createElement('p');//<p></p>
-let document = createTextNode(c);
-theNewPTag8.appendChild(theText3);//<p>test text</p>
-document.getElementsByTagName("body")[0];
-element3.appendChild(theNewPTag8);//<body><p>test text</p></body>
+let theText8 = document.createTextNode(c);
+theNewPTag8.appendChild(theText8);//<p>test text</p>
+let element9 = document.getElementsByTagName("body")[0];
+element9.appendChild(theNewPTag8);//<body><p>test text</p></body>
 
 let theNewPTag9 = document.createElement('p');//<p></p>
-document.createTextNode(a);
-theNewPTag9.appendChild(theText1);//<p>test text</p>
-document.getElementsByTagName("body")[0];
-element1.appendChild(theNewPTag9);//<body><p>test text</p></body>
+let theText9 = document.createTextNode(a);
+theNewPTag9.appendChild(theText9);//<p>test text</p>
+let element10 = document.getElementsByTagName("body")[0];
+element10.appendChild(theNewPTag9);//<body><p>test text</p></body>
 
 let theNewPTag10 = document.createElement('p');//<p></p>
-document.createTextNode(d);
-theNewPTag10.appendChild(theText4);//<p>test text</p>
-document.getElementsByTagName("body")[0];
-element4.appendChild(theNewPTag10);//<body><p>test text</p></body>
+let theText10 = document.createTextNode(d);
+theNewPTag10.appendChild(theText10);//<p>test text</p>
+let element11 = document.getElementsByTagName("body")[0];
+element11.appendChild(theNewPTag10);//<body><p>test text</p></body>
 
 //=================================================
 
-let theNewSpanTag11 = document.createElement('span');
+let theNewSpanTag1 = document.createElement('span');
 theNewSpanTag.setAttribute('id', 'dots')
-let element11 = document.getElementsByTagName("body")[0];
-element6.appendChild(theNewSpanTag);
+let element12 = document.getElementsByTagName("body")[0];
+element12.appendChild(theNewSpanTag);
 
 let dots1 = document.getElementById('dots');
 dots1.style.visibility = 'hidden';
@@ -99,7 +99,7 @@ do {
   dots1.innerHTML += '=';
 } while(dots1.offsetWidth < dots1.parentNode.offsetWidth);
 dots1.innerHTML = savedContent1;
-dots1.style.visibility = 'visible';*/
+dots1.style.visibility = 'visible';
 
 
 
