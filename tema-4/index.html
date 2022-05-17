@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <link rel="stylesheet" href="main.css" />-->
+    <script defer src="main.js"></script>
+    <title>Tema-4</title>
+</head>
+
+<body>
+    <h3>Tema obligatorie si simpla</h3>
+    <p>
+    <ul>
+        <ol>
+            <li> Declarati urmatorul sir:
+                let myArray = [1, 9, 4, 2, 8, 4, 7, 2, 1, 5, 4, 4, 3, 3, 8, 9];</li>
+            <p>Raspuns intrebarea 1:</p>
+            <script type="text/javascript">
+                var myArray = [1, 9, 4, 2, 8, 4, 7, 2, 1, 5, 4, 4, 3, 3, 8, 9];
+                for (let i = 0; i < myArray.length; i++) {
+                    console.log(myArray[i]);
+                    document.write(myArray[i] + '<br>');
+                }
+            </script>
+            <br>
+            <li>Parcurgeti acest sir folosind o structura repetitiva for si afisati, la consola, fiecare numar al
+                sirului, unul sub celalalt.</li>
+            <p>Raspuns intrebarea 2:</p>
+            <script>
+                let sum = 0;
+                let finalSum = 0;
+                for (let j = 0; j < myArray.length; j++) {
+                    sum += myArray[j];
+                }
+                console.log(sum);
+                document.write(sum + '<br>')
+
+            </script>
+            <br>
+            <li>Declarati o variabila ‘sum’, initializati-o cu 0 si adunati, pe rand, fiecare numar din sir acestei
+                variabile, pana cand, in final, obtineti suma tuturor numerelor din sir.
+                Scrieti un alt ‘for’ care numara intr-o variabila de cate ori apare cifra 4 in sir.</li>
+            <br>
+            <p>Raspuns intrebarea 3:</p>
+            <script>
+                let count = 0;
+                myArray.forEach((word) => {
+                    if (word == 4) {
+                        return count++;
+                    }
+                });
+                console.log('Number 4 appears ' + count + ' times in the array.');
+                document.write('Number 4 appears ' + count + ' times in the array.');
+            </script>
+        </ol>
+        <h3>Tema obligatorie ce necesita creativitate</h3>
+        <ol>
+            <li>
+                Declarati un alt sir numit ‘mySecondArray’, si,
+                parcurgand din nou primul sir, inserati in sirul nou
+                elementele primului sir din care scadeti valoarea 1.
+                Afisati noul sir, intreg, la consola. Veti obtine:
+                [0, 8, 3, 1, 7, 3, 6, 1, 0, 4, 3, 3, 2, 2, 7, 8]
+
+                <h4>Raspuns intrebarea 1:</h4>
+                <script>
+                    let mySecondArray = [];
+                    mySecondArray.length = myArray.length;
+                    for (let i = 0; i < mySecondArray.length; i++) {
+                        mySecondArray[i] = myArray[i] - 1;
+                    }
+                    console.log(mySecondArray);
+                    document.write(mySecondArray);
+                </script>
+            </li>
+            <br>
+            <li>Scrieti un cod care sa afiseze, automat, la consola, acele cifre din ‘myArray’
+                care apar una dupa alta in sir si au aceeasi valoare
+                (de exemplu, in myArray, atat elementul 11 cat si elementul 12 au aceeasi valoare, 4)
+                <h4>
+                    Raspuns intrebarea 2:
+                </h4>
+                <script>
+                    repeats = myArray.filter(function (a, i, aa) {
+                        return aa[i - 1] === a;
+                    });
+                    console.log(repeats);
+                    document.write(repeats);
+                    //let i = 0;
+                    //let resultToReturn = false;
+
+                    //for(let i = 0; i < myArray.length; i++){
+                    //    if(myArray[i] === myArra[i+1]){
+                    //        resultToReturn = true;
+                    //    }
+                    //    return myArray[i];
+                    //}
+                    //result = myArray[i];
+                    //while (i < myArray.length) {
+                    //    if (myArray[i] = myArray[i + 1]) {
+                    //        let count = 1;
+                    //    }
+                    //    i = i + 1;
+                    //    count++;
+                    //    result = result + myArray[i];
+                    //}
+                    //alert(result);
+                    //document.write(result);
+                </script>
+            </li>
+            <br>
+            <li>
+                Sirul ‘mySecondArray’ are 16 elemente.
+                Cititi de la tastatura (cu functia promt) un numar intre 1 si 16.
+                Afisati apoi, cu functia alert(), pentru utilizator,
+                cifra din sir care corespunde index-ului citit.
+                Exemplu: daca utilizatorul da index-ul 1, va trebui sa ii afisati 0,
+                daca alege index-ul 16, va trebui sa ii afisati 8
+                <h4>Raspuns la intrebarea 3:</h4>
+
+                <script>
+                    let myNum = Number(window.prompt('Write a number between 1 and 16: '));
+                    alert("Your chosen number is " + myNum);
+                    document.write('MySecondArray is: ' + mySecondArray + ('.') + ('<br>') + ('<br>'));
+                    document.write('Your chosen number is ' + myNum + (' .') + ('<br>') + ('<br>'));
+                    for (let f = 0; f <= mySecondArray.length; f++) {
+                        if (myNum == f) {
+                            alert('The element of the mySecondArray from the chosen index is: ' + mySecondArray[myNum - 1] + '.');
+                            console.log('The element of the mySecondArray from the chosen index is: ' + mySecondArray[myNum - 1] + '.');
+                            document.write('The element of the mySecondArray from the chosen index is: ' + mySecondArray[myNum - 1] + '.');
+                        }
+                    }
+                </script>
+                <br>
+                <br>
+            </li>
+            <li>
+                Modificati sirul ‘mySecondArray’ astfel incat fiecare element din acest sir sa fie,
+                la randul lui, un sir de 3 elemente.
+                Daca numarul unui element din sir era mai mic sau egal cu 4,
+                atunci noul element va contine un sir care porneste de la numarul initial si
+                creste cu cate 1. Daca numarului unui element din sir era mai mare decat 4,
+                atunci noul sir porneste de la numarul initial si scade cate 1. Exemplu:
+                [0, 8, 3, 1, 7, 3, 6, 1, 0, 4, 3, 3, 2, 2, 7, 8]
+                [[0, 1, 2], [8, 7, 6], [3, 4, 5], [1, 2, 3], [7, 6, 5] … etc]
+                <h4>Raspuns la intrebarea 4:</h4>
+                <script>
+                    //var mySecondArray = [0, 8, 3, 1, 7, 3, 6, 1, 0, 4, 3, 3, 2, 2, 7, 8];
+                    for (let i = 0; i < mySecondArray.length; i++) {
+                      let smallArray = [];
+                      if (mySecondArray[i] <= 4) {
+                        for (let j = 0; j < 3; j++) {
+                          smallArray[j] = mySecondArray[i] + j;
+                        }
+                      } else {
+                        for (let j = 0; j < 3; j++) {
+                          smallArray[j] = mySecondArray[i] - j;
+                        }
+                      }
+                      //mySecondArray[i] = smallArray + ('<br>');
+                      mySecondArray[i] = '[' + smallArray + ']';
+                    }
+                    console.log(mySecondArray);
+                    document.write(mySecondArray);
+                </script>
+                <br>
+                <br>
+            </li>
+            <li>
+                Dati utilizatorului sa citeasca 2 numere de la tastatura: un N si un X, unde X <= N. Desenati, la
+                    consola ( console.log() ) sau intr-un HTML ( document.write() ) o structura de genul: <table>
+                    <br>
+                    <tr>
+                        <th>
+                            Pentru N = 5 si X =3:
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            01010
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1010
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            ===
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            10
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            0
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Pentru N = 8 si X = 2:
+                        </th>
+                    <tr>
+                        <td>
+                            01010101
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            =======
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            010101
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            10101
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            0101
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            etc..
+                        </td>
+                    </tr>
+                    <tr>
+                    <tr>
+                        <th>
+                            Pentru N = 11 si X = 4:
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            01010101010
+                        </td>
+                    </tr>
+                    <td>
+                        1010101010
+                    </td>
+                    <tr>
+                        <td>
+                            010101010
+                        </td>
+                    </tr>
+                    <td>
+                        ========
+                    </td>
+                    <tr>
+                        <td>
+                            0101010
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            etc..
+                        </td>
+                    </tr>
+                    </table>
+                    <h4>Raspuns la intrebarea 5:</h4>
+                    <script>
+                        let myFunction = function myFunc() {
+                            var isExecuted = false;
+                            while (isExecuted == false) {
+                                var a = window.prompt("Enter a first number: ");
+                                var N = Number(a);
+                                alert("Your first number is " + N + ".");
+                                var b = window.prompt("Enter a second positive number less than the first: ");
+                                var X = Number(b);
+                                alert("Your first number is " + N + " and your second number is " + X + '.')
+                                if (X < N) {
+                                    isExecuted = true;
+                                    for (let i = N; i >= 1; i--) {
+                                        for (let j = i; j >= 1; j--) {
+                                            if (i === X) {
+                                                document.write('=');
+                                            }
+                                            else if (j % 2 == 0) {
+                                                document.write('1');
+                                            }
+                                            else {
+                                                document.write('0');
+                                            }
+                                        }
+                                        document.write("<br>");
+                                    }
+                                }
+                                else {
+                                    alert("Your second number is bigger than the first one or at least one is not positive!");
+                                    alert('Try again!');
+                                }
+                            }
+                        }
+                        myFunction();
+                    </script>
+
+            </li>
+
+        </ol>
+
+        </h3>
+</body>
+
+</html>
