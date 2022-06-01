@@ -147,26 +147,28 @@ let z = prompt("Chose to add - write 1 - or multiply - write 2 - the elements of
 
 let arrayChoice = {
     mySum: function mySum() {
+      let aSum = 0;
         for (i = 0; i < myArray.length; i++) {
-            aSum = parseInt(myArray[0]);
-            aSum = aSum + myArray[i];
+            let arrayItemAsInt = parseInt(myArray[i]);
+            aSum = aSum + arrayItemAsInt;
         }
         return aSum;
     },
     myMultipl: function mult() {
+      let aMult = 1;
         for (i = 0; i < myArray.length; i++) {
-            aMult = parseInt(myArray[0]);
-            aMult = aMult * myArray[i];
+            let arrayItemAsInt = parseInt(myArray[0]);
+            aMult = aMult * arrayItemAsInt;
         }
         return aMult;
     },
     resultChoice: function aChoice() {
         let myChoice = ' ';
         if (z === '1') {
-            resultChoice = arrayChoice.mySum();
+            return arrayChoice.mySum();
         }
         else{
-            resultChoice = arrayChoice.myMultipl();
+            return arrayChoice.myMultipl();
         }
     }
 }
