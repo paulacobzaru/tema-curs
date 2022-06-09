@@ -149,11 +149,30 @@ let z = prompt(
 );
 
 let arrayChoice = {
-  mySum: function mySum() {
-    let aSum = 0;
-    for (i = 0; i < myArray.length; i++) {
-      let arrayItemAsInt = parseInt(myArray[i]);
-      aSum = aSum + arrayItemAsInt;
+    mySum: function mySum() {
+      let aSum = 0;
+        for (i = 0; i < myArray.length; i++) {
+            let arrayItemAsInt = parseInt(myArray[i]);
+            aSum = aSum + arrayItemAsInt;
+        }
+        return aSum;
+    },
+    myMultipl: function mult() {
+      let aMult = 1;
+        for (i = 0; i < myArray.length; i++) {
+            let arrayItemAsInt = parseInt(myArray[i]);
+            aMult = aMult * arrayItemAsInt;
+        }
+        return aMult;
+    },
+    resultChoice: function aChoice() {
+        let myChoice = ' ';
+        if (z === '1') {
+            return arrayChoice.mySum();
+        }
+        else{
+            return arrayChoice.myMultipl();
+        }
     }
     return aSum;
   },
@@ -171,8 +190,7 @@ let arrayChoice = {
     } else {
       resultChoice = arrayChoice.myMultipl();
     }
-  },
-};
+  };
 
 let res = "Rezultatul alegerii este: " + arrayChoice.resultChoice();
 console.log(res);
