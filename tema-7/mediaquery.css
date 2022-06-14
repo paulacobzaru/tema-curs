@@ -1,4 +1,4 @@
-/**Afisati intr-o pagina web goala, alba, 
+/** 7.1. Afisati intr-o pagina web goala, alba, 
  * un div patrat de 20px pe 20px, de culoare albastra. 
  * Acest div trebuie sa pluteasca, initial, 
  * la 50 px de marginea stanga a paginii si 
@@ -27,6 +27,11 @@
     width: 20px;
     background-color: blue;
 }
+
+/** 7.2. Daca latimea ecranului devine mai mica de 500px, 
+div-ul se va comporta la fel, 
+doar ca in loc sa fie distanta de margini cu 50px, 
+va deveni distanta doar cu 5px.**/
 
 @media only screen and (max-width: 500px){
     .firstClickBox{
