@@ -8,21 +8,17 @@
  * cat si de marginea de jos a paginii. */
 
  .firstClickBox {
-    position: absolute;
-    margin-left: 50px;
-    margin-top: 50px;
-    top:0;
-    left: 0;
+    position: fixed;
+    left: 50px;
+    top: 50px;
     height: 20px;
     width: 20px;
     background-color: blue;
 }
 .secondClickBox {
-    position: absolute;
-    margin-right: 50px;
-    margin-bottom: 50px;
-    bottom: 0;
-    right: 0;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
     height: 20px;
     width: 20px;
     background-color: blue;
@@ -35,11 +31,11 @@ va deveni distanta doar cu 5px.**/
 
 @media only screen and (max-width: 500px){
     .firstClickBox{
-        margin-top: 5px;
-        margin-left: 5px;
+        top: 5px;
+        left: 5px;
     }
     .secondClickBox{
-        margin-bottom: 5px;
-        margin-right: px;
+        bottom: 5px;
+        right: 5px;
     }
 }
