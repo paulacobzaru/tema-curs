@@ -143,10 +143,7 @@ ex4.appendChild(result4);
 // [2, 4, 8, 1, 9, 4, 5, 5, 8, 9, 1, 3, 2] adunare/inmultire numere sir
 
 let myArray = [2, 4, 8, 1, 9, 4, 5, 5, 8, 9, 1, 3, 2];
-let z = prompt(
-  "Chose to add - write 1 - or multiply - write 2 - the elements of the array: " +
-    myArray
-);
+let z = prompt("Chose to add - write 1 - or multiply - write 2 - the elements of the array: " + myArray)
 
 let arrayChoice = {
     mySum: function mySum() {
@@ -160,7 +157,7 @@ let arrayChoice = {
     myMultipl: function mult() {
       let aMult = 1;
         for (i = 0; i < myArray.length; i++) {
-            let arrayItemAsInt = parseInt(myArray[i]);
+            let arrayItemAsInt = parseInt(myArray[0]);
             aMult = aMult * arrayItemAsInt;
         }
         return aMult;
@@ -174,93 +171,101 @@ let arrayChoice = {
             return arrayChoice.myMultipl();
         }
     }
-    return aSum;
-  },
-  myMultipl: function mult() {
-    let aMult = 1;
-    for (i = 0; i < myArray.length; i++) {
-      aMult = aMult * arrayItemAsInt;
-    }
-    return aMult;
-  },
-  resultChoice: function aChoice() {
-    let myChoice = " ";
-    if (z === "1") {
-      resultChoice = arrayChoice.mySum();
-    } else {
-      resultChoice = arrayChoice.myMultipl();
-    }
-  };
+}
 
-let res = "Rezultatul alegerii este: " + arrayChoice.resultChoice();
+
+let res = 'Rezultatul alegerii este: ' + arrayChoice.resultChoice();
 console.log(res);
 
-let ex5 = document.getElementById("5.5");
-let result5 = document.createElement("div");
-result5.innerHTML = res;
+let ex5 = document.getElementById('5.5');
+let result5 = document.createElement('div');
+result5.innerHTML = res; 
 ex5.appendChild(result5);
 
 //info about a person
 
 let person = {
-  firstName: prompt("Enter your first name: "),
-  lastName: prompt("Enter your last name: "),
-  gender: prompt("Enter your gender (f/m): "),
-  nationality: prompt("What is your nationality (Romanian/other)"),
-  yearBirth: prompt("Enter your year of birth: "),
-  writePoliteName: function politeName() {
-    let prefix = "Mr. ";
-    if (person.sex !== "m") {
-      prefix = "Mrs. ";
+    firstName: prompt('Enter your first name: '),
+    lastName: prompt('Enter your last name: '),
+    gender: prompt('Enter your gender (f/m): '),
+    nationality: prompt('What is your nationality (Romanian/other)'),
+    yearBirth: prompt('Enter your year of birth: '),
+    writePoliteName: function politeName() {
+        let prefix = 'Mr. ';
+        if (person.sex !== 'm') {
+          prefix = 'Mrs. ';
+        }
+        return politeName = prefix + person.firstName + ' ' + person.lastName;
+      },
+    checkIfRomanian: function nationalCheck(){
+        let nationality = 'Romanian';
+        if(person.nationality !== 'Romanian'){
+            nationality = "other";
+        }
+        return nationalCheck = person.firstName + " "+person.lastName+"'s nationality is "+nationality+'.';
+    },
+    calculateYourAge: function yourAge(){
+        let age = 0;
+        const d = new Date();
+        let year = d.getFullYear();
+        age = year - person.yearBirth;
+        return yourAge = person.firstName + ' ' + person.lastName + ' is ' + age + ' years old.';
     }
-    return (politeName = prefix + person.firstName + " " + person.lastName);
-  },
-  checkIfRomanian: function nationalCheck() {
-    let nationality = "Romanian";
-    if (person.nationality !== "Romanian") {
-      nationality = "other";
-    }
-    return (nationalCheck =
-      person.firstName +
-      " " +
-      person.lastName +
-      "'s nationality is " +
-      nationality +
-      ".");
-  },
-  calculateYourAge: function yourAge() {
-    let age = 0;
-    const d = new Date();
-    let year = d.getFullYear();
-    age = year - person.yearBirth;
-    return (yourAge =
-      person.firstName + " " + person.lastName + " is " + age + " years old.");
-  },
-};
+}
 console.log(person.writePoliteName());
 console.log(person.checkIfRomanian());
 console.log(person.calculateYourAge());
 
-let ex61 = document.getElementById("5.6");
-let result61 = document.createElement("div");
+let ex61 = document.getElementById('5.6');
+let result61 = document.createElement('div');
 result61.innerHTML = person.writePoliteName();
 ex61.appendChild(result61);
 
-let ex62 = document.getElementById("5.6");
-let result62 = document.createElement("div");
+let ex62 = document.getElementById('5.6');
+let result62 = document.createElement('div');
 result62.innerHTML = person.checkIfRomanian();
 ex62.appendChild(result62);
-
-let ex63 = document.getElementById("5.6");
-let result63 = document.createElement("div");
+    
+let ex63 = document.getElementById('5.6');
+let result63 = document.createElement('div');
 result63.innerHTML = person.calculateYourAge();
 ex63.appendChild(result63);
 
-/**2.4. Scrieti un obiect al carui proprietati
- * vor avea valoarea de tip functie
- * si vor fi functiile de mai sus */
+ //5.7 chain functions
 
-let ex64 = document.getElementById("5.7");
-let result64 = document.createElement("div");
-result64.innerHTML = person.writePoliteName.checkIfRomanian;
-ex64.appendChild(result64);
+
+ /**let a = prompt('Write a positive number:');
+ let b = prompt('Write an other positive number:');
+ a = parseInt(a);
+ b = parseInt(b);
+
+ let chainObject = {
+  chainResult: 0,
+  addNo: function(a, b){
+    this.chainResult = a + b;
+    return this;
+  },
+  substractNo: function(a){
+    this.chainResult = this.chainResult - a;
+    return this;
+  },
+  multiplyNo: function(a){
+    this.chainResult = this.chainResult * a;
+    return this;
+  },
+  devideNo: function(a){
+    this.chainResult = this.chainResult / a;
+    return this;
+  },
+ }
+
+console.log(chainObject.addNo().substractNo().multiplyNo().devideNo());
+
+
+let result7 = document.getElementById('5.7');
+let resChain = document.createElement('div');
+resChain.innerHTML = chainObject.addNo().substractNo().multiplyNo().devideNo();
+result7.appendChild(resChain);**/
+
+console.log(person.checkIfRomanian('Italian').calculateYourAge('2000'));
+
