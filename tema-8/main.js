@@ -1,5 +1,5 @@
 let crewLaunch = {
-  
+
 
   data: {
     crew: []
@@ -31,16 +31,20 @@ let crewLaunch = {
           let tdName = document.createElement('td');
           let tdAgency = document.createElement('td');
           let tdStatus = document.createElement('td');
+          let tdWiki = document.createElement('a');
+          tdWiki.setAttribute('href', crewLaunch.data.crew[i].wikipedia);
 
           th.innerHTML = i + 1;
           tdName.innerHTML = crewLaunch.data.crew[i].name;
           tdAgency.innerHTML = crewLaunch.data.crew[i].agency;
           tdStatus.innerHTML = crewLaunch.data.crew[i].status;
+          tdWiki.innerHTML = crewLaunch.data.crew[i].wikipedia;
 
           tr.appendChild(th);
           tr.appendChild(tdName);
           tr.appendChild(tdAgency);
           tr.appendChild(tdStatus);
+          tr.appendChild(tdWiki);
           table.appendChild(tr);
     }
   },
