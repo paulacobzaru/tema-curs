@@ -1,0 +1,7 @@
+body{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+#leafletmap{
+    max-height: 300px;
+}

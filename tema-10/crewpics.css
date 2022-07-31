@@ -1,0 +1,15 @@
+div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+#imageDiv{
+    height: 300px;
+    width: 300px;
+    margin: 5px;
+    background-color: black;
+    background-position: center;
+}
+
