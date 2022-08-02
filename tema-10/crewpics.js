@@ -27,20 +27,21 @@ let crewPics = {
                 
             let image = document.createElement('img');
             let memberImage = crewPics.data.crewPhotos[i].image;
-            let memberName = crewPics.data.crewPhotos[i].name;
+            let divName = document.createElement('div');
+            divName.innerHTML = crewPics.data.crewPhotos[i].name;
+
             image.setAttribute('src', memberImage);
-            image.setAttribute('alt', memberName);
+            image.setAttribute('alt', divName);
             image.setAttribute('id', memberImage);
             image.style.breakAfter="always";
-            let divName = document.createElement('p');
-            divName.innerText.name;
-
+           
             image.style.height = '250px';
             image.style.width = '250px';
             image.style.objectFit = 'scale-down';
 
             divName.style.alignItems = 'center';
             divName.style.color = 'white';
+            divName.style.alignItems = 'center';
 
             bigImageDiv.appendChild(eachImageDiv);
             eachImageDiv.appendChild(image);
