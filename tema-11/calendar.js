@@ -23,6 +23,24 @@ sa fie ordonata pe zile din saptamana (Luni, Marti etc);
 astfel, daca 1 a lunii pica Miercuri, primele casute de Luni si 
 Marti sa fie goale:*/
 
+let getLaunchesForMonthAndYear = function(
+  year, // as number
+  month, // as number
+  allLaunches
+) {
+  let resultLaunches = [];
+  for (let i = 0; i < allLaunches.length; i++) {
+    let item = allLaunches[i];
+    let itemDate = item.date_utc;
+    let itemYear = itemDate.split('-')[0];
+    let itemMonth = itemDate.split('-')[1];
+    if (parseInt(itemYear) === year && parseInt(itemMonth) === month) {
+      resultLaunches.push(item);
+    }
+  }
+  return resultLaunches;
+};
+
 let date = new Date();
 
 let calendar = {
@@ -41,7 +59,7 @@ let calendar = {
 
   init: function () {
     axios
-      .get("https://api.spacexdata.com/v4/crew")
+      .get("https://api.spacexdata.com/v4/launches")
       .then(function (response) {
         calendar.allDataLaunches = response.data;
 
@@ -66,6 +84,8 @@ let calendar = {
           }*/
           launchDay = calendar.allDataLaunches;
         }
+
+        renderCalendar();
       })
       .catch(function (error) {
         console.log(error);
@@ -76,6 +96,13 @@ let calendar = {
 calendar.init();
 
 let renderCalendar = function () {
+  // we read out the year and the month
+  let currentYear = date.getFullYear();
+  let currentMonth = date.getMonth() + 1;
+  let currentMonthLaunches = getLaunchesForMonthAndYear(currentYear, currentMonth, calendar.allDataLaunches);
+  console.log(currentMonthLaunches);
+
+
   date.setDate(1);
 
   let monthDays = document.querySelector(".days");
@@ -130,10 +157,17 @@ let renderCalendar = function () {
   }
 
   for (let i = 1; i <= lastDay; i++) {
+    let isCircledDay = false;
+    for (let j = 0; j < currentMonthLaunches.length; j++) {
+      let launchItem = currentMonthLaunches[j];
+      let itemDateString = launchItem.date_utc.split('T')[0];
+      let itemDay = itemDateString.split('-')[2];
+      if (parseInt(itemDay) === i) {
+        isCircledDay = true;
+      }
+    }
     if (
-      i === new Date().getDate() &&
-      date.getMonth() === new Date().getMonth() &&
-      date.getFullYear() === new Date().getFullYear()
+      isCircledDay
     ) {
       days += `<div class="today">${i}</div>`;
     } else {
@@ -152,11 +186,10 @@ let onTileClicked = function () {
     date.setMonth(date.getMonth() - 1);
     renderCalendar();
   }),
-    document.querySelector(".next").addEventListener("click", () => {
-      date.setMonth(date.getMonth() + 1);
-      renderCalendar();
-    });
+  document.querySelector(".next").addEventListener("click", () => {
+    date.setMonth(date.getMonth() + 1);
+    renderCalendar();
+  });
 };
 
-renderCalendar();
 onTileClicked();
