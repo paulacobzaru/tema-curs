@@ -80,9 +80,17 @@ let renderCalendar = function () {
 
   let monthDays = document.querySelector(".days");
 
-  let lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+  let lastDay = new Date(
+    date.getFullYear(), 
+    date.getMonth() + 1, 0
+    )
+    .getDate();
 
-  let prevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
+  let prevLastDay = new Date(
+    date.getFullYear(), 
+    date.getMonth(), 0
+    )
+    .getDate();
 
   let firstDayIndex = date.getDay();
 
@@ -90,7 +98,8 @@ let renderCalendar = function () {
     date.getFullYear(),
     date.getMonth() + 1,
     0
-  ).getDay();
+  )
+  .getDay();
 
   let nextDays = 7 - lastDayIndex - 1;
 
@@ -123,7 +132,8 @@ let renderCalendar = function () {
   for (let i = 1; i <= lastDay; i++) {
     if (
       i === new Date().getDate() &&
-      date.getMonth() === new Date().getMonth()
+      date.getMonth() === new Date().getMonth() &&
+      date.getFullYear() === new Date().getFullYear()
     ) {
       days += `<div class="today">${i}</div>`;
     } else {
