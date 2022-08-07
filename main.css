@@ -1,5 +1,6 @@
 h1{
     color: grey;
+    text-align: center;
 }
 #theMenu.list.menuContainer div{
     border: solid;
@@ -37,6 +38,7 @@ p{
 .teme {
     align-items: center;
     text-align: center;
+    justify-content: center;
 }
 a:link {
     width: 400px;

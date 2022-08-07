@@ -239,7 +239,7 @@ ex63.appendChild(result63);
  a = parseInt(a);
  b = parseInt(b);
 
- let chainObject = {
+ let chaincalendarect = {
   chainResult: 0,
   addNo: function(a, b){
     this.chainResult = a + b;
@@ -259,12 +259,12 @@ ex63.appendChild(result63);
   },
  }
 
-console.log(chainObject.addNo().substractNo().multiplyNo().devideNo());
+console.log(chaincalendarect.addNo().substractNo().multiplyNo().devideNo());
 
 
 let result7 = document.getElementById('5.7');
 let resChain = document.createElement('div');
-resChain.innerHTML = chainObject.addNo().substractNo().multiplyNo().devideNo();
+resChain.innerHTML = chaincalendarect.addNo().substractNo().multiplyNo().devideNo();
 result7.appendChild(resChain);**/
 
 //console.log(person.checkIfRomanian('Italian').calculateYourAge('2000'));

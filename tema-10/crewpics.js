@@ -37,7 +37,7 @@ let crewPics = {
            
             image.style.height = '250px';
             image.style.width = '250px';
-            image.style.objectFit = 'scale-down';
+            image.style.calendarectFit = 'scale-down';
 
             divName.style.alignItems = 'center';
             divName.style.color = 'white';
