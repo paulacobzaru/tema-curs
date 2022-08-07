@@ -25,6 +25,7 @@ for(let i = 0; i < getStringArray.length; i++){
 
 // This is our unsorted array
 let ourArray = [34, 43, 55, 63, 50, 6, 25, 57, 1];
+console.log('The unsortedd array is: '+ourArray +'.');
 
 // Creating the bblSort function
 let bubbleSort = (ourArray) => {
@@ -46,6 +47,6 @@ let bubbleSort = (ourArray) => {
         }
     }
     // Print the sorted array
-    console.log(ourArray);
+    console.log('The sorted array is: '+ourArray+'.');
 }
 bubbleSort(ourArray);
