@@ -14,7 +14,6 @@ cu buline clickabile.
 Asigurati-va ca nu doar cele 3 luni de la punctul 3 sunt acoperite 
 de programul vostru, ci veti lasa user-ul sa mearga din luna in luna, 
 pana la primele, respectiv ultimele lansari SpaceX.
-
 Tema obligatorie ce necesita creativitate :)
 Aveti grija ca, in loc de ‘next’ si ‘prev’, 
 pe butoanele din marginea paginii, sa fie scrise numele lunii din an corecte
@@ -157,6 +156,7 @@ let renderCalendar = function () {
   }
 
   for (let i = 1; i <= lastDay; i++) {
+
     let isCircledDay = false;
     for (let j = 0; j < currentMonthLaunches.length; j++) {
       let launchItem = currentMonthLaunches[j];
@@ -166,6 +166,7 @@ let renderCalendar = function () {
         isCircledDay = true;
       }
     }
+
     if (
       isCircledDay
     ) {
