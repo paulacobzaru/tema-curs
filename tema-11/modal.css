@@ -16,20 +16,20 @@
 
 @media only screen and (min-width: 550px) {
     .popup {
-        left: 50%;
-        top: 50%;
+        left: 20%;
+        top: 70%;
         transform: translate(-50%, -50%);
-        width: 500px;
-        height: 400px;
+        width: 400px;
+        height: 200px;
     }
 }
 
 @media only screen and (min-width: 900px) {
     .popup {
-        left: 50%;
-        top: 50%;
+        left: 20%;
+        top: 70%;
         transform: translate(-50%, -50%);
-        width: 650px;
-        height: 400px;
+        width: 400px;
+        height: 200px;
     }
 }
